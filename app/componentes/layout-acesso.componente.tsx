@@ -1,6 +1,5 @@
 import { Titulo } from "./titulo.componente";
 
-// Layout das telas de login e cadastro (sem barra lateral)
 export default function LayoutAcesso(props: any) {
     return (
         <div className="flex min-h-screen">
