@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fafafa;
+  --foreground: #111111;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+
+  .botao {
+    @apply px-5 py-3 text-xs font-semibold uppercase tracking-widest cursor-pointer flex items-center justify-center gap-2
+  }
+
+  .botao-primario {
+    @apply bg-neutral-900 hover:bg-black text-white
+  }
+
+  .botao-secundario {
+    @apply bg-white hover:bg-neutral-100 text-neutral-900 border border-neutral-300
+  }
+
+  .filtro {
+    @apply px-4 py-2 text-xs uppercase tracking-widest border border-neutral-300 bg-white text-neutral-500 cursor-pointer
+  }
+
+  .filtro-ativo {
+    @apply bg-neutral-900 text-white border-neutral-900
+  }
+
+  .campo {
+    @apply flex flex-col gap-1 flex-1
+  }
+
+  .campo-rotulo {
+    @apply text-xs uppercase tracking-widest text-neutral-400
+  }
+
+  .campo-texto {
+    @apply py-2 bg-transparent border-b border-neutral-300 outline-none focus:border-neutral-900
+  }
+
+  .item-menu {
+    @apply flex items-center gap-3 p-3 text-sm text-neutral-500 hover:bg-neutral-100
+  }
+
+  .barra-lateral {
+    @apply bg-white border-r border-neutral-200 p-6 w-64 flex flex-col gap-8
+  }
+
+  .conteudo-pagina {
+    @apply flex-1 flex flex-col gap-6 p-8
+  }
+
+  .cartao {
+    @apply bg-white border border-neutral-200 flex flex-col
+  }
+
+  .fundo-modal {
+    @apply fixed inset-0 bg-black/60 flex items-center justify-center p-4
+  }
+
+  .modal {
+    @apply bg-white w-full max-w-2xl flex flex-col gap-4 p-6
+  }
+
+  .acesso-visual {
+    @apply hidden md:flex flex-1 flex-col justify-between bg-black text-white p-12
+  }
+
+  .acesso-painel {
+    @apply w-full md:w-[480px] bg-white flex flex-col
+  }
+
+  .acesso-link {
+    @apply text-xs uppercase tracking-widest text-neutral-500 cursor-pointer
+  }
+}
